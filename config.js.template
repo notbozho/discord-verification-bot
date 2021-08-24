@@ -1,0 +1,22 @@
+var config = module.exports = {};
+config.general = {};
+config.settings = {};
+config.support = {};
+config.embeds = {};
+
+// General settings
+config.general.botName = 'Command Handler Template';
+config.general.prefix = '!';
+config.general.guildid = '';
+config.general.clientid = '';
+
+// Settings
+config.settings.owners = [];
+
+// Support Server
+config.support.guildid = '';
+config.support.owner = '';
+
+// Embeds Settings
+config.embeds.embedColour = 'FFFFFF';
+config.embeds.embedFooterText = 'Developed by Lorne#0211';

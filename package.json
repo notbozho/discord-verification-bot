@@ -1,0 +1,31 @@
+{
+  "name": "v13bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js",
+    "dev": "node src/index.js",
+    "production": "node src/index.js"
+  },
+  "keywords": [
+    "js",
+    "discord-bot",
+    "v13",
+    "discordbot"
+  ],
+  "author": "Lorne#0211",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.5.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "colour": "^0.7.1",
+    "discord-api-types": "^0.22.0",
+    "discord.js": "^13.1.0",
+    "discord.js-search": "^1.0.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
