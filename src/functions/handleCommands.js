@@ -6,6 +6,7 @@ const { Routes } = require('discord-api-types/v9');
 module.exports = (client) => {
 	const clientId = config.general.clientid;
 	const guildId = config.general.guildid;
+
 	client.handleCommands = async (commandFolders, path) => {
 		client.commandArray = [];
 		for (folder of commandFolders) {
@@ -23,25 +24,17 @@ module.exports = (client) => {
 
 		(async () => {
 			try {
-				console.log('Started refreshing application (/) commands.'.blue);
-
-				await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
+				console.log(`Started refreshing application (/) commands.`.blue);
+				
+				await rest.put(Routes.applicationCommands(clientId), {
 					body: client.commandArray,
 				});
 
-				console.log('Successfully reloaded application (/) commands.'.green.bold);
+				console.log(`Successfully reloaded application (/) commands.`.green.bold);
+
 			} catch (error) {
 				console.log(`${error}`);
 			}
 		})();
 	};
 };
-
-/*
-
-> Coded by Lorne#0211
-> https://discord.gg/bUMcVASrJM
-> https://twitter.com/Lorne_Booker
-> https://github.com/lornebookerr
-
-*/
